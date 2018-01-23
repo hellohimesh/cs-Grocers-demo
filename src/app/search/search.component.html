@@ -1,0 +1,76 @@
+<div class="">
+	<!--Admin panel-->
+	<div class="admin-panel">
+		<!--Second row-->
+		<div class="row m-b-0">
+			<!--First column-->
+			<div class="col-md-12">
+				<!--Panel content-->
+				<div class=" p-y-0">
+					<h4 class="indigo-text text-center" style="padding:15px">
+						<i class="fa fa-search left fa-2x"></i> Search 
+					</h4>
+
+					<form (submit)="search($event)" ngNativeValidate>
+						<div class="row">
+						<div class="col-md-4">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">Pallet</label>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">UPC</label>
+							</div>
+
+						</div>
+												<div class="col-md-4">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">Scan Date From</label>
+							</div>
+
+						</div>
+												<div class="col-md-4">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">Box/Tote#</label>
+							</div>
+
+						</div>						<div class="col-md-4">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">Item Code</label>
+							</div>
+
+						</div>
+												<div class="col-md-4">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">Scan Date TO</label>
+							</div>
+
+						</div>
+												<div class="col-md-4">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">By User</label>
+							</div>
+
+						</div>
+
+
+						<div class="col-md-12 text-center">
+						<button type="button" class="btn btn-primary waves-light" mdbRippleRadius>Search</button>
+						<button type="button" class="btn btn-default waves-light" mdbRippleRadius>Reset</button>
+					</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

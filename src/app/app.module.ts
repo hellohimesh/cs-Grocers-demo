@@ -1,18 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-
+import { Routing } from './app-routing.module';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
+import { LabelPrintingComponent } from './label-printing/label-printing.component';
+import { SetUpComponent } from './set-up/set-up.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LabelPrintingComponent,
+    SetUpComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+     MDBBootstrapModule.forRoot(),
+    Routing
   ],
   providers: [],
   bootstrap: [AppComponent]

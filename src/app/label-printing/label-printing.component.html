@@ -1,0 +1,75 @@
+<div class="">
+	<!--Admin panel-->
+	<div class="admin-panel">
+		<!--Second row-->
+		<div class="row m-b-0">
+			<!--First column-->
+			<div class="col-md-12">
+				<!--Panel content-->
+				<div class=" p-y-0">
+					<h4 class="indigo-text text-center" style="padding:15px">
+						<i class="fa fa-tag left fa-2x"></i> Label Printing 
+					</h4>
+
+					<div class="row">
+						<div class="col-md-6">
+							<fieldset>
+								<legend>Enter Details</legend>
+								<form (submit)="search($event)" ngNativeValidate>
+									<div class="row">
+
+										<div class="col-md-6">
+											<div class="btn-group" dropdown>
+												<button dropdownToggle type="button" class="btn btn-primary dropdown-toggle waves-light" mdbRippleRadius>
+													Label Type
+												</button>
+
+												<div class="dropdown-menu dropdown-primary">
+													<a class="dropdown-item" href="#">Label 1</a>
+													<a class="dropdown-item" href="#">Label 2</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="btn-group" dropdown>
+												<button dropdownToggle type="button" class="btn btn-primary dropdown-toggle waves-light" mdbRippleRadius>
+													Aisle
+												</button>
+
+												<div class="dropdown-menu dropdown-primary">
+													<a class="dropdown-item" href="#">test</a>
+												</div>
+											</div>
+										</div>
+										<div class="md-form">
+											<input mdbActive type="text" id="form1" class="form-control">
+											<label for="form1" class="">Pallet/Tote/Box #</label>
+										</div>
+
+
+
+										<div class="col-md-12 text-center">
+											<button type="button" class="btn btn-primary waves-light" mdbRippleRadius>Print Label</button>
+											<button type="button" class="btn btn-default waves-light" mdbRippleRadius>Preview</button>
+										</div>
+									</div>
+
+								</form>
+							</fieldset>
+
+						</div>
+
+						<div class="col-md-6" style="border-left: 1px solid grey">
+						<fieldset>
+							<legend>Scan</legend>
+							<div style=" margin:0 auto;
+    display:block;">
+							<button type="button" class="btn btn-primary waves-light" mdbRippleRadius>Scan</button>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+<div class="">
+	<!--Admin panel-->
+	<div class="admin-panel">
+		<!--Second row-->
+		<div class="row m-b-0">
+			<!--First column-->
+			<div class="col-md-12">
+				<!--Panel content-->
+				<div class=" p-y-0">
+					<h4 class="indigo-text text-center" style="padding:15px">
+						<i class="fa fa-comments-o left fa-2x"></i> Set-up 
+					</h4>
+
+					<form (submit)="search($event)" ngNativeValidate>
+						<div class="row">
+						<div class="col-md-6">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">Box#/Name</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="md-form">
+								<input mdbActive type="text" id="form1" class="form-control">
+								<label for="form1" class="">WareHourse</label>
+							</div>
+
+						</div>
+
+
+						<div class="col-md-12">
+							<div class="btn-group" dropdown>
+								<button dropdownToggle type="button" class="btn btn-primary dropdown-toggle waves-light" mdbRippleRadius>
+									Bucket
+								</button>
+
+								<div class="dropdown-menu dropdown-primary">
+									<a class="dropdown-item" href="#">Bucket 1</a>
+									<a class="dropdown-item" href="#">Bucket 2</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 text-center">
+						<button type="button" class="btn btn-primary waves-light" mdbRippleRadius>Search</button>
+						<button type="button" class="btn btn-default waves-light" mdbRippleRadius>Reset</button>
+					</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
