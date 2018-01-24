@@ -1,0 +1,355 @@
+import { Project, Person , groceryMock, setup } from './model';
+export const PROJECTS: Project[] = [
+    {
+        id: 1,
+        name: 'Mercury',
+        cost: 277000000,
+        first_flight: 'September 9, 1959',
+        status: 'Complete'
+    },
+    {
+        id: 2,
+        name: 'Gemini',
+        cost: 1300000000,
+        first_flight: 'April 8, 1964',
+        status: 'Complete'
+    },
+    {
+        id: 3,
+        name: 'Apollo',
+        cost: 25400000000,
+        first_flight: 'February 26, 1966',
+        status: 'Complete'
+    },
+    {
+        id: 4,
+        name: 'Skylab',
+        launch: 'May 14, 1973',
+        status: 'Complete'
+    },
+    {
+        id: 5,
+        name: 'Apollo-Soyuz',
+        launch: 'July 15, 1975',
+        status: 'Complete'
+    },
+    {
+        id: 6,
+        name: 'Space Shuttle',
+        total_cost: 196000000000,
+        first_flight: 'August 12, 1977',
+        status: 'Complete'
+    }
+    
+];
+export const grocery : groceryMock[] = [{
+  "warehousecode": 1,
+  "warehousename": "Asoka",
+  "pallet": "60681-3003",
+  "BoxTote": "09-445-9848",
+  "UPC": "06-872-6838",
+  "itemCode": 71,
+  "itemDescription": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
+  "Quantity": 24,
+  "cost": 25,
+  "total": 97,
+  "invoice": 27,
+  "ByUSer": "Renata"
+}, {
+  "warehousecode": 2,
+  "warehousename": "Regrant",
+  "pallet": "0169-0082",
+  "BoxTote": "92-118-8519",
+  "UPC": "15-907-8760",
+  "itemCode": 37,
+  "itemDescription": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+  "Quantity": 79,
+  "cost": 69,
+  "total": 85,
+  "invoice": 52,
+  "ByUSer": "Hyman"
+}, {
+  "warehousecode": 3,
+  "warehousename": "Rank",
+  "pallet": "36987-3233",
+  "BoxTote": "56-990-0598",
+  "UPC": "77-843-5458",
+  "itemCode": 98,
+  "itemDescription": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque.",
+  "Quantity": 71,
+  "cost": 16,
+  "total": 79,
+  "invoice": 3,
+  "ByUSer": "Claudell"
+}, {
+  "warehousecode": 4,
+  "warehousename": "Holdlamis",
+  "pallet": "76254-2001",
+  "BoxTote": "00-770-9141",
+  "UPC": "80-745-4940",
+  "itemCode": 37,
+  "itemDescription": "Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+  "Quantity": 57,
+  "cost": 81,
+  "total": 44,
+  "invoice": 79,
+  "ByUSer": "Findlay"
+}, {
+  "warehousecode": 5,
+  "warehousename": "Opela",
+  "pallet": "54473-254",
+  "BoxTote": "77-081-2672",
+  "UPC": "47-089-1127",
+  "itemCode": 90,
+  "itemDescription": "Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+  "Quantity": 85,
+  "cost": 39,
+  "total": 25,
+  "invoice": 57,
+  "ByUSer": "Jdavie"
+}, {
+  "warehousecode": 6,
+  "warehousename": "Tempsoft",
+  "pallet": "68400-120",
+  "BoxTote": "03-217-0619",
+  "UPC": "16-113-7045",
+  "itemCode": 5,
+  "itemDescription": "In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+  "Quantity": 95,
+  "cost": 32,
+  "total": 39,
+  "invoice": 48,
+  "ByUSer": "Alikee"
+}, {
+  "warehousecode": 7,
+  "warehousename": "Solarbreeze",
+  "pallet": "49348-924",
+  "BoxTote": "62-384-9480",
+  "UPC": "17-859-1941",
+  "itemCode": 55,
+  "itemDescription": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
+  "Quantity": 86,
+  "cost": 13,
+  "total": 57,
+  "invoice": 20,
+  "ByUSer": "Janka"
+}, {
+  "warehousecode": 8,
+  "warehousename": "Rank",
+  "pallet": "43269-826",
+  "BoxTote": "04-109-3845",
+  "UPC": "81-106-5494",
+  "itemCode": 40,
+  "itemDescription": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+  "Quantity": 48,
+  "cost": 97,
+  "total": 3,
+  "invoice": 34,
+  "ByUSer": "Vale"
+}, {
+  "warehousecode": 9,
+  "warehousename": "Sonair",
+  "pallet": "55315-163",
+  "BoxTote": "14-607-5597",
+  "UPC": "10-016-3808",
+  "itemCode": 67,
+  "itemDescription": "Nulla mollis molestie lorem. Quisque ut erat.",
+  "Quantity": 23,
+  "cost": 27,
+  "total": 7,
+  "invoice": 11,
+  "ByUSer": "Delphinia"
+}, {
+  "warehousecode": 10,
+  "warehousename": "Subin",
+  "pallet": "10812-390",
+  "BoxTote": "44-116-6725",
+  "UPC": "07-308-2046",
+  "itemCode": 2,
+  "itemDescription": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+  "Quantity": 11,
+  "cost": 66,
+  "total": 75,
+  "invoice": 26,
+  "ByUSer": "Stephen"
+}, {
+  "warehousecode": 11,
+  "warehousename": "Otcom",
+  "pallet": "59779-965",
+  "BoxTote": "96-802-9743",
+  "UPC": "13-787-4940",
+  "itemCode": 21,
+  "itemDescription": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh. In quis justo.",
+  "Quantity": 18,
+  "cost": 61,
+  "total": 91,
+  "invoice": 69,
+  "ByUSer": "Zsa zsa"
+}, {
+  "warehousecode": 12,
+  "warehousename": "Hatity",
+  "pallet": "0409-7248",
+  "BoxTote": "81-575-3143",
+  "UPC": "12-712-2274",
+  "itemCode": 56,
+  "itemDescription": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+  "Quantity": 80,
+  "cost": 29,
+  "total": 75,
+  "invoice": 99,
+  "ByUSer": "Alexi"
+}, {
+  "warehousecode": 13,
+  "warehousename": "Quo Lux",
+  "pallet": "0517-2305",
+  "BoxTote": "90-798-5969",
+  "UPC": "48-563-6325",
+  "itemCode": 34,
+  "itemDescription": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum. Proin eu mi.",
+  "Quantity": 28,
+  "cost": 62,
+  "total": 48,
+  "invoice": 42,
+  "ByUSer": "Sharona"
+}, {
+  "warehousecode": 14,
+  "warehousename": "Zaam-Dox",
+  "pallet": "65162-046",
+  "BoxTote": "31-374-5062",
+  "UPC": "66-514-4182",
+  "itemCode": 40,
+  "itemDescription": "Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+  "Quantity": 37,
+  "cost": 52,
+  "total": 75,
+  "invoice": 87,
+  "ByUSer": "Tamarah"
+}, {
+  "warehousecode": 15,
+  "warehousename": "Stringtough",
+  "pallet": "52685-332",
+  "BoxTote": "82-011-9789",
+  "UPC": "93-474-0225",
+  "itemCode": 39,
+  "itemDescription": "Suspendisse accumsan tortor quis turpis. Sed ante. Vivamus tortor. Duis mattis egestas metus.",
+  "Quantity": 4,
+  "cost": 19,
+  "total": 9,
+  "invoice": 30,
+  "ByUSer": "Burch"
+}, {
+  "warehousecode": 16,
+  "warehousename": "Konklux",
+  "pallet": "0228-3482",
+  "BoxTote": "38-798-8007",
+  "UPC": "71-009-6896",
+  "itemCode": 19,
+  "itemDescription": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
+  "Quantity": 68,
+  "cost": 26,
+  "total": 87,
+  "invoice": 65,
+  "ByUSer": "Audrie"
+}, {
+  "warehousecode": 17,
+  "warehousename": "Alpha",
+  "pallet": "10812-169",
+  "BoxTote": "90-992-3850",
+  "UPC": "97-841-9856",
+  "itemCode": 32,
+  "itemDescription": "Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+  "Quantity": 17,
+  "cost": 20,
+  "total": 18,
+  "invoice": 85,
+  "ByUSer": "Opal"
+}, {
+  "warehousecode": 18,
+  "warehousename": "Andalax",
+  "pallet": "0054-0543",
+  "BoxTote": "42-675-3744",
+  "UPC": "28-031-8140",
+  "itemCode": 70,
+  "itemDescription": "Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
+  "Quantity": 7,
+  "cost": 87,
+  "total": 53,
+  "invoice": 78,
+  "ByUSer": "Lyda"
+}, {
+  "warehousecode": 19,
+  "warehousename": "Matsoft",
+  "pallet": "52125-673",
+  "BoxTote": "77-670-2782",
+  "UPC": "28-097-1344",
+  "itemCode": 4,
+  "itemDescription": "Sed vel enim sit amet nunc viverra dapibus.",
+  "Quantity": 7,
+  "cost": 60,
+  "total": 90,
+  "invoice": 49,
+  "ByUSer": "Upton"
+}, {
+  "warehousecode": 20,
+  "warehousename": "Bytecard",
+  "pallet": "36987-3123",
+  "BoxTote": "29-760-3229",
+  "UPC": "01-717-7201",
+  "itemCode": 49,
+  "itemDescription": "Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.",
+  "Quantity": 36,
+  "cost": 45,
+  "total": 81,
+  "invoice": 44,
+  "ByUSer": "Worden"
+}];
+export const setupData:setup[]=[{"warehousecode":1,"warehousename":"Zane","commodity":"Christmas","markdown":25,"bucket":"trash"},
+{"warehousecode":2,"warehousename":"Gabey","commodity":"Dabney","markdown":76,"bucket":"food"},
+{"warehousecode":3,"warehousename":"Dedra","commodity":"Mathieu","markdown":8,"bucket":"food"},
+{"warehousecode":4,"warehousename":"Francis","commodity":"Vanacci","markdown":68,"bucket":"trash"},
+{"warehousecode":5,"warehousename":"Nealon","commodity":"Yankin","markdown":36,"bucket":"trash"},
+{"warehousecode":6,"warehousename":"Tamiko","commodity":"Brosio","markdown":85,"bucket":"food"},
+{"warehousecode":7,"warehousename":"Jamill","commodity":"Garley","markdown":50,"bucket":"food"},
+{"warehousecode":8,"warehousename":"Larissa","commodity":"Given","markdown":59,"bucket":"trash"},
+{"warehousecode":9,"warehousename":"Agatha","commodity":"Frame","markdown":84,"bucket":"trash"},
+{"warehousecode":10,"warehousename":"Tallie","commodity":"Grinishin","markdown":83,"bucket":"food"},
+{"warehousecode":11,"warehousename":"Katuscha","commodity":"Lenahan","markdown":27,"bucket":"trash"},
+{"warehousecode":12,"warehousename":"Andrey","commodity":"Blankau","markdown":26,"bucket":"trash"},
+{"warehousecode":13,"warehousename":"Delilah","commodity":"Sperski","markdown":24,"bucket":"trash"},
+{"warehousecode":14,"warehousename":"Charita","commodity":"Canellas","markdown":9,"bucket":"trash"},
+{"warehousecode":15,"warehousename":"Lenka","commodity":"Rickeard","markdown":83,"bucket":"trash"},
+{"warehousecode":16,"warehousename":"Erminia","commodity":"Arends","markdown":44,"bucket":"food"},
+{"warehousecode":17,"warehousename":"Kalinda","commodity":"Corse","markdown":5,"bucket":"trash"},
+{"warehousecode":18,"warehousename":"Whittaker","commodity":"Nilges","markdown":71,"bucket":"trash"},
+{"warehousecode":19,"warehousename":"Bel","commodity":"Chinnock","markdown":92,"bucket":"food"},
+{"warehousecode":20,"warehousename":"Eolande","commodity":"Scurrah","markdown":4,"bucket":"trash"}];
+export const PERSONNEL: Person[] = [
+    { 
+        id: 151, 
+        name: 'Alan B. Shepard, Jr.', 
+        job: 'Astronaut', 
+        year_joined: 1959,
+        missions: ['MR-3', 'Apollo 14']
+    },
+    { 
+        id: 152, 
+        name: 'Virgil I. Grissom', 
+        job: 'Astronaut', 
+        year_joined: 1959,
+        missions: ['MR-4', 'Apollo 1']
+    },
+    { 
+        id: 153, 
+        name: 'John H. Glenn, Jr.', 
+        job: 'Astronaut', 
+        year_joined: 1959,
+        missions: ['MA-6','STS-95']
+    },
+    { 
+        id: 154, 
+        name: 'M. Scott Carpenter', 
+        job: 'Astronaut', 
+        year_joined: 1959,
+        missions: ['MA-7']
+    }
+];

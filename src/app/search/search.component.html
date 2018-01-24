@@ -13,62 +13,66 @@
 
 					<form (submit)="search($event)" ngNativeValidate>
 						<div class="row">
-						<div class="col-md-4">
-							<div class="md-form">
-								<input mdbActive type="text" id="form1" class="form-control">
-								<label for="form1" class="">Pallet</label>
+							<div class="col-md-4">
+								<div class="md-form">
+									<input mdbActive type="text" id="form1" class="form-control">
+									<label for="form1" class="">Pallet</label>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="md-form">
+									<input mdbActive type="text" id="form1" class="form-control">
+									<label for="form1" class="">UPC</label>
+								</div>
+
+							</div>
+							<div class="col-md-4">
+								<div class="md-form">
+									<input mdbActive type="text" id="form1" class="form-control">
+									<label for="form1" class="">Scan Date From</label>
+								</div>
+
+							</div>
+							<div class="col-md-4">
+								<div class="md-form">
+									<input mdbActive type="text" id="form1" class="form-control">
+									<label for="form1" class="">Box/Tote#</label>
+								</div>
+
+							</div>						<div class="col-md-4">
+								<div class="md-form">
+									<input mdbActive type="text" id="form1" class="form-control">
+									<label for="form1" class="">Item Code</label>
+								</div>
+
+							</div>
+							<div class="col-md-4">
+								<div class="md-form">
+									<input mdbActive type="text" id="form1" class="form-control">
+									<label for="form1" class="">Scan Date TO</label>
+								</div>
+
+							</div>
+							<div class="col-md-4">
+								<div class="md-form">
+									<input mdbActive type="text" id="form1" class="form-control">
+									<label for="form1" class="">By User</label>
+								</div>
+
+							</div>
+
+
+							<div class="col-md-12 text-center">
+								<button type="button" class="btn btn-primary waves-light" mdbRippleRadius>Search</button>
+								<button type="button" class="btn btn-default waves-light" mdbRippleRadius>Reset</button>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="md-form">
-								<input mdbActive type="text" id="form1" class="form-control">
-								<label for="form1" class="">UPC</label>
-							</div>
 
-						</div>
-												<div class="col-md-4">
-							<div class="md-form">
-								<input mdbActive type="text" id="form1" class="form-control">
-								<label for="form1" class="">Scan Date From</label>
-							</div>
-
-						</div>
-												<div class="col-md-4">
-							<div class="md-form">
-								<input mdbActive type="text" id="form1" class="form-control">
-								<label for="form1" class="">Box/Tote#</label>
-							</div>
-
-						</div>						<div class="col-md-4">
-							<div class="md-form">
-								<input mdbActive type="text" id="form1" class="form-control">
-								<label for="form1" class="">Item Code</label>
-							</div>
-
-						</div>
-												<div class="col-md-4">
-							<div class="md-form">
-								<input mdbActive type="text" id="form1" class="form-control">
-								<label for="form1" class="">Scan Date TO</label>
-							</div>
-
-						</div>
-												<div class="col-md-4">
-							<div class="md-form">
-								<input mdbActive type="text" id="form1" class="form-control">
-								<label for="form1" class="">By User</label>
-							</div>
-
-						</div>
-
-
-						<div class="col-md-12 text-center">
-						<button type="button" class="btn btn-primary waves-light" mdbRippleRadius>Search</button>
-						<button type="button" class="btn btn-default waves-light" mdbRippleRadius>Reset</button>
-					</div>
-					</div>
-
-				</form>
+					</form>
+					<my-table [records]="grocery"
+					[caption]="'grocery mock data'"
+				>
+				</my-table>			
 			</div>
 		</div>
 	</div>

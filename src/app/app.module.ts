@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { LabelPrintingComponent } from './label-printing/label-printing.component';
 import { SetUpComponent } from './set-up/set-up.component';
 import { SearchComponent } from './search/search.component';
+import {dataService} from './data/data.service';
+import {SharedModule} from './table-layout/shared.module';
 
 
 @NgModule({
@@ -14,14 +16,16 @@ import { SearchComponent } from './search/search.component';
     AppComponent,
     LabelPrintingComponent,
     SetUpComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
+    SharedModule,
      MDBBootstrapModule.forRoot(),
     Routing
   ],
-  providers: [],
+
+  providers: [dataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

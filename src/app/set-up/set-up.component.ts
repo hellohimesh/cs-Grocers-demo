@@ -1,3 +1,6 @@
+import { dataService } from '../data/data.service';
+import { Project, Person ,groceryMock , setup} from '../data/model';
+import { ColumnSetting } from '../table-layout/layout.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./set-up.component.css']
 })
 export class SetUpComponent implements OnInit {
-
-  constructor() { }
+setupdata : setup[];
+  constructor(private dataService: dataService) { }
 
   ngOnInit() {
+  	this.setupdata = this.dataService.getSetupdata();
   }
 
 }
