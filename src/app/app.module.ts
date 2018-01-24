@@ -24,6 +24,7 @@ import {SharedModule} from './table-layout/shared.module';
      MDBBootstrapModule.forRoot(),
     Routing
   ],
+  exports:[SearchComponent],
 
   providers: [dataService],
   bootstrap: [AppComponent]

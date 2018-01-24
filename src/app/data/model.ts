@@ -21,24 +21,24 @@ export class Person {
 }
 
 export class groceryMock {
-warehousecode: string;
+warehousecode: number;
 warehousename: string;
 pallet:string;
 BoxTote:string;
 UPC:string;
-itemCode:string;
+itemCode:number;
 itemDescription:string;
-Quantity:string;
-cost:string;
-total:string;
-invoice:string;
+Quantity:number;
+cost:number;
+total:number;
+invoice:number;
 ByUSer:string;
 }
 
 export class setup {
-warehousecode: string;
+warehousecode: number;
 warehousename: string;
     commodity: string;
-    markdown: string;
+    markdown: number;
     bucket: string;
 }

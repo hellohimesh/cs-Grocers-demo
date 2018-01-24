@@ -8,7 +8,7 @@ import {LabelPrintingComponent} from './label-printing/label-printing.component'
 const routes: Routes = [
 	
     { path: 'set-up', component: SetUpComponent },
-    { path: 'search', component: SearchComponent },
+    { path: '', component: SearchComponent },
     { path: 'label-print', component: LabelPrintingComponent },
 ];
 
